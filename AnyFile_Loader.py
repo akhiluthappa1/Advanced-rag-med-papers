@@ -50,7 +50,7 @@ def load_single_document(file_path: str) -> List[Document]:
         loader = loader_class(file_path, **loader_args)
         documents = loader.load()
 
-        # Add file path to metadata of each Document
+        # Add file paths to metadata of each Document
         for document in documents:
             document.metadata = {'file_path': file_path}
             # if 'metadata' in document.__dict__:  # Assuming the Document has a metadata attribute
